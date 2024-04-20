@@ -9,7 +9,7 @@ document.getElementById("incrementBtn").addEventListener("click", function() {
 body: "() => { 
   cy.visit(baseUrl); 
   cy.on('window:alert', alertText => { 
-    expect(alertText).to.equal('Current Counter Value: 0'); 
+    expect(alertText).to.equal('Current Counter Value: 0'); // Update assertion
   }); 
   cy.get('#incrementBtn').click(); 
 }"
