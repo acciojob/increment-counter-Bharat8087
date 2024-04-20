@@ -13,6 +13,17 @@ document.getElementById("incrementBtn").addEventListener("click", function() {
     expect(counterValue).to.equal(0); 
   }); 
   cy.get('#incrementBtn').click(); 
+	  cy.get('#counter').should('have.text', '1'); 
+
+}() => { 
+  cy.visit(baseUrl); 
+  cy.get('#incrementBtn').click(); 
+  cy.get('#counter').should('have.text', '1'); 
+  cy.get('#incrementBtn').click(); 
+  cy.get('#counter').should('have.text', '2'); 
+  cy.get('#incrementBtn').click(); 
+  cy.get('#counter').should('have.text', '3'); 
 }
+
 
 
