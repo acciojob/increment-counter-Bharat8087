@@ -1,10 +1,10 @@
-/*let counter = 0;
-document.getElementById("counter").textContent = counter;
+let counterElement = document.getElementById('counter');
+let incrementBtn = document.getElementById('incrementBtn');
 
-document.getElementById("incrementBtn").addEventListener("click", function() {
-    alert(" " + counter);
+let counter = 0;
+
+incrementBtn.addEventListener('click', function() {
+    alert('Current Counter Value: ' + counter);
     counter++;
-    document.getElementById("counter").textContent = counter;
-});*/
-
-
+    counterElement.innerHTML = counter;
+});
