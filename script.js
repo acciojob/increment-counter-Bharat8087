@@ -4,7 +4,6 @@ let incrementBtn = document.getElementById('incrementBtn');
 let counter = 0;
 
 incrementBtn.addEventListener('click', function() {
-    alert( + counter);
-    counter++;
-    counterElement.innerHTML = counter;
+    alert('Current Counter Value: ' + counter);
+    counterElement.innerHTML = ++counter; 
 });
